@@ -119,8 +119,6 @@
             <div class="dropdown-menu" style="width: 320px;">
               <ul role="menu">
                 <li><a href="#">GM: D3m0n#5033</a></li>
-                <li><a href="#">GM: DatGarnat#5762</a></li>
-                
                 <li><a href="#">Discord: https://discord.gg/ZQEsPcZscf</a></li>
               </ul>
 
@@ -134,7 +132,7 @@
             <div class="dropdown-menu" style="width: 320px;">
               <ul role="menu">
                 <li><a href="index.html">Contact: D3m0n#5033</a></li>
-                <li><a href="index.html">Contact: DatGarnat#5762</a></li>
+
               </ul>
 
             </div>
@@ -203,17 +201,6 @@
               <a id="top-l2jbrasil-legacy" href="//top.l2jbrasil.com/index.php?a=in&u=adolfofer" target="_blank"><img
                   src="//top.l2jbrasil.com/button.php?u=adolfofer" alt="Top L2JBrasil  de Servidores de   Lineage2 "
                   border="0" /></a>
-		    
-              <br>
-              <br>
-		    
-	      <a href="https://vgw.hopzone.net/site/vote/105331/1"><img src="images/hopzone.jpg" 
-		alt="Vote our sever on HopZone.Net - top l2 servers"></a>	
-	         
-		    <!-- style="border:0; position: fixed; z-index:99999; bottom: 0; right: 0; width:140px; height: 120px-->
-														   
-		<br>
-              <br>
               <!-- 
                 
               <a href="https://l2votes.com/votes.php?sid=56" target="_blank" title="l2votes.com">
@@ -231,16 +218,25 @@
 
 
             </div>
-            <br><br><br>
-            <a target="_blank" href="https://discord.gg/ZQEsPcZscf"><h3>Server Discord</h3></a>
+            <style>
+              .wipe {
+                text-align: center;
+                font-size: 40px;
+              }
+            </style>
+            <p class="wipe"> Server Wipe!</p>
+            <p class="wipe" id="demo"></p>
+            <a target="_blank" href="https://discord.gg/ZQEsPcZscf">
+              <h3>Server Discord</h3>
+            </a>
             <div class="container youplay-content">
-              <a href="https://mega.nz/file/FtUTmSCD#_anEit6t9-CX0JyRwEYc9_zQ4dfS-iALDXy0QXtb1Ns" class="btn">L2SamuX
-                System<br><span class="label">Updated: 2022-12-06</span></a>
+              <a href="https://mega.nz/file/5UlhEazZ#52bUJxrSI0cyVuZuf5LBT2LmqbmErA0Cjt1ifjEbn9M" class="btn">L2SamuX
+                System<br><span class="label">Updated: 2023-01-12</span></a>
             </div>
 
             <div class="container youplay-content">
-              <a href="https://mega.nz/file/tIt3CabA#pIpTw_iM03d9_W1bpShsvAQk9waosKjNBGxvNvkkzdE" class="btn">L2SamuX
-                System Textures<br><span class="label">Updated: 2022-12-02</span></a>
+              <a href="https://mega.nz/file/3SwmgS5B#CMKXqNet3cCvYo3lcCQFQFCmQVB5RgCAIkDY88lF_3Q" class="btn">L2SamuX
+                System Textures<br><span class="label">Updated: 2022-11-11</span></a>
             </div>
 
 
@@ -505,3 +501,22 @@
 </body>
 
 </html>
+
+<script>
+  
+  var deadline = new Date(Date.UTC(2023, 0, 13, 19, 0, 0)).getTime();
+  var x = setInterval(function () {
+    var now = new Date().getTime();
+    var t = deadline - now;
+    var days = Math.floor(t / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((t % (1000 * 60)) / 1000);
+    document.getElementById("demo").innerHTML = days + "d " +
+      hours + "h " + minutes + "m " + seconds + "s ";
+    if (t < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script>
